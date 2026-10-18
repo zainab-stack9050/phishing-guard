@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Smart Phishing Guard",
+  "version": "0.0.1",
+  "description": "On-device phishing detection with explainable reasons.",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_title": "Smart Phishing Guard",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
