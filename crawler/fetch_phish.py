@@ -37,7 +37,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 DATA_DIR = Path(os.environ.get("DATA_DIR",
                                Path(__file__).resolve().parent.parent / "data"))
-FEED_URL = "https://openphish.com/feed.txt"
+FEED_URL = "https://raw.githubusercontent.com/openphish/public_feed/refs/heads/main/feed.txt"
 RAW_DIR = DATA_DIR / "raw" / "phish"
 FEED_DIR = DATA_DIR / "feeds"
 LABELS_PATH = DATA_DIR / "labels.csv"
